@@ -29,7 +29,7 @@ window.CONFIG = {
   },
 
   logo: {
-    archivo: "assets/img/logo.png",
+    archivo: "https://raw.githubusercontent.com/facundomsella-oss/Alianzas-Estrategicas/main/assets/img/logo.png",
     alt: "Scouts de Argentina Asociación Civil",
     respaldo: "✦",
     alto: "44px"
