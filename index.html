@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALIANZAS · Juego de decisiones</title>
+  <meta name="description" content="Generá alianzas y posicioná tu grupo como un actor de referencia.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor">
+      <div class="marca">
+        <span class="escudo" data-logo></span>
+        <span id="titulo-evento">ALIANZAS</span>
+      </div>
+      <nav>
+        <a href="index.html" class="activo">Inicio</a>
+        <a href="#ranking">Ranking</a>
+        <a href="juego.html">Jugar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor">
+      <section class="hero">
+        <h1 id="hero-titulo">ALIANZAS</h1>
+        <p id="hero-bajada"></p>
+      </section>
+
+      <div id="aviso-modo" class="aviso info oculto"></div>
+      <div id="aviso-sesion" class="aviso ambar oculto"></div>
+
+      <section class="tarjeta" id="aventura">
+        <h2 id="titulo-aventura"></h2>
+        <p class="vacio">
+          Cada aventura dura entre 9 y 10 decisiones. Podés jugar sin registrarte; los datos
+          te los pedimos al final, si querés entrar al ranking.
+        </p>
+        <div class="rejilla-roles" id="lista-roles"></div>
+        <div id="resumen-rol" class="aviso info oculto"></div>
+        <div class="fila-botones">
+          <button class="boton" type="button" id="btn-comenzar" disabled>Comenzar la aventura</button>
+        </div>
+      </section>
+
+      <section class="tarjeta desplegable">
+        <details>
+          <summary>¿Cómo se calcula el puntaje?</summary>
+          <div class="contenido-desplegable">
+            <p id="texto-objetivo"></p>
+            <ul class="lista-decisiones" id="lista-metricas"></ul>
+            <p class="vacio">
+              Cada decisión suma puntos y mueve las variables de la aventura elegida. Además hay
+              opciones que solo se habilitan si llegaste con determinada confianza, reputación o
+              alineación del equipo, así que cada partida es distinta.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <section class="tarjeta desplegable">
+        <details>
+          <summary>¿Qué significa mi rango?</summary>
+          <div class="contenido-desplegable">
+            <p class="vacio">El puntaje final se traduce a un rango según el porcentaje que obtuviste.</p>
+            <div class="tabla-scroll">
+              <table class="ranking tabla-rangos">
+                <thead>
+                  <tr>
+                    <th>Rango</th>
+                    <th class="num">%</th>
+                    <th>Qué significa</th>
+                  </tr>
+                </thead>
+                <tbody id="lista-rangos"></tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <section class="tarjeta" id="ranking">
+        <div class="fila-titulo">
+          <h2>Ranking</h2>
+          <button class="boton secundario oculto" id="btn-actualizar" type="button">Actualizar</button>
+        </div>
+
+        <div id="ranking-bloqueado">
+          <div class="aviso info" id="mensaje-bloqueo"></div>
+          <form id="form-datos" novalidate>
+            <div id="campos-datos"></div>
+            <div id="error-datos" class="aviso error oculto" role="alert"></div>
+            <button class="boton bloque" type="submit">Guardar mis datos y ver el ranking</button>
+          </form>
+        </div>
+
+        <div id="ranking-visible" class="oculto">
+          <div class="pestanas" id="pestanas-ranking"></div>
+          <div class="mi-puesto oculto" id="caja-mi-puesto"></div>
+          <div id="ranking-aviso" class="aviso info oculto"></div>
+          <div class="tabla-scroll">
+            <table class="ranking">
+              <thead>
+                <tr>
+                  <th class="num">Puesto</th>
+                  <th>Nombre</th>
+                  <th class="num">Puntaje</th>
+                  <th class="num">%</th>
+                  <th>Rango</th>
+                </tr>
+              </thead>
+              <tbody id="ranking-cuerpo">
+                <tr><td colspan="5" class="vacio">Cargando…</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="ayuda" style="margin-top:.8rem;">
+            Cada aventura tiene su ranking: los puntajes no se comparan entre roles.
+          </p>
+          <form class="inline-form" id="form-mi-puesto">
+            <div class="campo">
+              <label for="email-buscar">Ver mi puesto con otro mail</label>
+              <input type="email" id="email-buscar" placeholder="tu@mail.com" maxlength="120">
+            </div>
+            <button class="boton secundario" type="submit">Buscar</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-titulo" id="pie-organizacion"></div>
+      <div id="pie-dependencia"></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/logo.js"></script>
+  <script src="assets/js/contenido-rover.js"></script>
+  <script src="assets/js/contenido-educador.js"></script>
+  <script src="assets/js/contenido-distrito.js"></script>
+  <script src="assets/js/contenido.js"></script>
+  <script src="assets/js/motor.js"></script>
+  <script src="assets/js/formulario.js"></script>
+  <script src="assets/js/datos.js"></script>
+  <script src="assets/js/ranking.js"></script>
+  <script src="assets/js/inicio.js"></script>
+</body>
+</html>

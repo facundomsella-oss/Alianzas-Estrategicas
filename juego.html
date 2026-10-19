@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Partida · ALIANZAS</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor">
+      <div class="marca">
+        <span class="escudo" data-logo></span>
+        <span id="titulo-evento">ALIANZAS</span>
+      </div>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#ranking">Ranking</a>
+        <a href="juego.html" class="activo">Jugar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor" id="zona-juego">
+      <div class="cabecera-juego">
+        <span id="etiqueta-turno">Turno 1</span>
+        <span id="etiqueta-rol" class="chip-rol"></span>
+        <span id="etiqueta-jugador"></span>
+      </div>
+      <div class="barra-turno"><span id="barra-progreso" style="width:0%"></span></div>
+      <div id="aviso-sin-aventura" class="aviso error oculto">
+        Todavía no elegiste aventura. Volvé a la <a href="index.html">página de inicio</a> y elegí una.
+      </div>
+      <div class="rejilla dos" id="rejilla-partida" style="margin-top:1.5rem;">
+        <section class="escenario" id="tarjeta-escenario">
+          <div class="icono" id="escenario-icono">✦</div>
+          <div class="etiqueta" id="escenario-etapa"></div>
+          <h2 id="escenario-titulo"></h2>
+          <p class="texto" id="escenario-texto"></p>
+          <div class="lista-opciones" id="lista-opciones"></div>
+        </section>
+
+        <aside class="panel-metricas" id="panel-metricas">
+          <h3 id="titulo-metricas">Estado de la partida</h3>
+          <div id="metricas"></div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="contenedor-chico oculto" id="zona-final"></div>
+  </main>
+
+  <div class="capa oculto" id="capa-resultado" role="dialog" aria-modal="true">
+    <div class="dialogo">
+      <h3 id="resultado-titulo"></h3>
+      <span class="puntos-obtenidos" id="resultado-puntos"></span>
+      <p id="resultado-texto"></p>
+      <div class="chips" id="resultado-chips"></div>
+      <button class="boton bloque" id="btn-continuar" type="button">Continuar</button>
+    </div>
+  </div>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-titulo" id="pie-organizacion"></div>
+      <div id="pie-dependencia"></div>
+      <div>Las decisiones no se pueden deshacer.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/logo.js"></script>
+  <script src="assets/js/contenido-rover.js"></script>
+  <script src="assets/js/contenido-educador.js"></script>
+  <script src="assets/js/contenido-distrito.js"></script>
+  <script src="assets/js/contenido.js"></script>
+  <script src="assets/js/motor.js"></script>
+  <script src="assets/js/formulario.js"></script>
+  <script src="assets/js/datos.js"></script>
+  <script src="assets/js/ranking.js"></script>
+  <script src="assets/js/juego.js"></script>
+</body>
+</html>
